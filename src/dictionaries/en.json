@@ -1,0 +1,19 @@
+{
+  "common": {
+    "title": "Chess Museum",
+    "description": "Virtual Gallery / Showcase for unique chess sets",
+    "language": "Language",
+    "home": "HOME",
+    "gallery": "GALLERY"
+  },
+  "landing": {
+    "badge": "VIRTUAL GALLERY SHOWCASE",
+    "title_top": "THE ART OF",
+    "title_bottom": "GRANDMASTERS",
+    "hero_description": "Explore a curated assembly of 560+ unique and highly crafted strategic masterpieces.",
+    "cta_title": "Have a unique set missing from the collection?",
+    "cta_description": "Contact the owner if you would like to sell it.",
+    "cta_button": "Contact me",
+    "browse_gallery": "Browse Gallery"
+  }
+}

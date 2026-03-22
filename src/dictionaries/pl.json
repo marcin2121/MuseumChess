@@ -1,0 +1,19 @@
+{
+  "common": {
+    "title": "Muzeum Szachów",
+    "description": "Wirtualna Galeria / Showcase dla unikalnych zestawów szachowych",
+    "language": "Język",
+    "home": "STRONA GŁÓWNA",
+    "gallery": "GALERIA"
+  },
+  "landing": {
+    "badge": "WIRTUALNA GALERIA",
+    "title_top": "SZTUKA",
+    "title_bottom": "ARCYMISTRZÓW",
+    "hero_description": "Przeglądaj wyselekcjonowaną kolekcję ponad 560 unikalnych i kunsztownie wykonanych dzieł strategicznych.",
+    "cta_title": "Masz unikalny zestaw, którego brakuje w kolekcji?",
+    "cta_description": "Napisz do właściciela, jeśli chcesz go sprzedać.",
+    "cta_button": "Skontaktuj się",
+    "browse_gallery": "Przeglądaj galerię"
+  }
+}
