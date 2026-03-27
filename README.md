@@ -4,6 +4,14 @@
 > **Status projektu: Porzucony / Zamrożony**  
 > Projekt został zatrzymany na etapie prezentacji strony głównej. Nie jest dalej rozwijany.
 
+## 📺 Demo
+
+### 🇵🇱 Wersja Polska
+![MuseumChess 3D Demo PL](/demo_pl.webp)
+
+### 🇬🇧 English Version
+![MuseumChess 3D Demo EN](/demo_en.webp)
+
 ## 🌟 O projekcie
 MuseumChess to konceptualna strona internetowa stworzona z myślą o pasjonatach szachów. Głównym założeniem było stworzenie eleganckiego, "muzealnego" klimatu, który łączy historyczny charakter gry z nowoczesnymi technologiami webowymi.
 

@@ -31,12 +31,15 @@ function rookProfile(): THREE.Vector2[] {
 }
 
 function knightProfile(): THREE.Vector2[] {
-  // Short pedestal only — horse head is added separately
+  // Full lathe knight — symmetric and consistent with other pieces
   return [
     V(0.00,0.00), V(0.26,0.00), V(0.28,0.02), V(0.28,0.07), V(0.26,0.09),
     V(0.15,0.11), V(0.13,0.14), V(0.11,0.20), V(0.10,0.28), V(0.09,0.34),
-    V(0.10,0.38), V(0.13,0.40), V(0.14,0.42), V(0.13,0.44),
-    V(0.11,0.46), V(0.00,0.46),
+    V(0.10,0.38), V(0.12,0.40), V(0.14,0.42), V(0.13,0.44), V(0.10,0.46),
+    V(0.09,0.50), V(0.10,0.54), V(0.14,0.58), // wide flare
+    V(0.16,0.60), V(0.15,0.63), V(0.11,0.66), // taper
+    V(0.08,0.68), V(0.10,0.70), V(0.12,0.72), // top bulb
+    V(0.11,0.74), V(0.08,0.76), V(0.04,0.77), V(0.00,0.78),
   ];
 }
 
@@ -92,41 +95,15 @@ function Piece({ type, color, position }: { type: string; color: string; positio
 
   const profile = useMemo(() => (profiles[type] || pawnProfile)(), [type]);
 
-  // Knight rotation — white faces center
-  const yRot = type === "n" ? (isWhite ? Math.PI : 0) : 0;
-
   return (
-    <group position={position} scale={[1, 1.15, 1]} rotation={[0, yRot, 0]}>
+    <group position={position} scale={[1, 1.15, 1]}>
       {/* Main lathe body */}
       <mesh castShadow>
         <latheGeometry args={[profile, 48]} />
         <meshPhysicalMaterial {...mat} />
       </mesh>
 
-      {/* Knight — horse head (ExtrudeGeometry, rotated to face sideways) */}
-      {type === "n" && (() => {
-        const s = new THREE.Shape();
-        // Horse silhouette in XY plane (X=forward, Y=up)
-        s.moveTo(-0.10, 0);       // back of neck bottom
-        s.lineTo(-0.12, 0.10);    // back neck
-        s.bezierCurveTo(-0.14, 0.20, -0.12, 0.32, -0.08, 0.38); // mane
-        s.bezierCurveTo(-0.04, 0.44, 0.00, 0.46, 0.04, 0.44);   // top of head/ears
-        s.bezierCurveTo(0.08, 0.42, 0.12, 0.38, 0.14, 0.34);    // forehead
-        s.bezierCurveTo(0.16, 0.30, 0.20, 0.28, 0.22, 0.26);    // nose bridge
-        s.bezierCurveTo(0.24, 0.24, 0.24, 0.20, 0.20, 0.18);    // nostril/mouth
-        s.bezierCurveTo(0.16, 0.16, 0.12, 0.18, 0.10, 0.18);    // chin
-        s.bezierCurveTo(0.06, 0.16, 0.02, 0.10, 0.00, 0.06);    // throat
-        s.lineTo(-0.10, 0);       // close
 
-        return (
-          <group position={[0, 0.44, 0]}>
-            <mesh castShadow rotation={[0, Math.PI / 2, 0]} position={[0, 0, 0.06]}>
-              <extrudeGeometry args={[s, { depth: 0.12, bevelEnabled: true, bevelThickness: 0.025, bevelSize: 0.025, bevelSegments: 4 }]} />
-              <meshPhysicalMaterial {...mat} />
-            </mesh>
-          </group>
-        );
-      })()}
 
 
       {/* King cross */}
