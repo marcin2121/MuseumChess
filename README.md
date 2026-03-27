@@ -1,8 +1,8 @@
 # MuseumChess 🏛️♟️
 
-> [!WARNING]  
-> **Status projektu: Porzucony / Zamrożony**  
-> Projekt został zatrzymany na etapie prezentacji strony głównej. Nie jest dalej rozwijany.
+> [!NOTE]  
+> **Status projektu: Showcase / Demo**  
+> Projekt prezentuje możliwości techniczne — interaktywną wizualizację 3D szachownicy z animacją historycznej partii.
 
 ## 📺 Demo
 
@@ -34,4 +34,4 @@ Na żywo na szachownicy 3D odgrywana jest słynna partia z 1956 roku: **Donald B
 *   **i18n**: Wbudowany przełącznik języków (PL/EN) zintegrowany z nagłówkiem.
 
 ---
-*Projekt ma charakter wyłącznie pokazowy.*
+*Projekt ma charakter pokazowy — demonstracja możliwości 3D w ekosystemie Next.js.*
